@@ -108,10 +108,7 @@ where
     }
 }
 
-impl<T> Iterator for Heap<T>
-where
-    T: Default,
-{
+impl<T: Default> Iterator for Heap<T> {
     type Item = T;
 
     fn next(&mut self) -> Option<T> {
